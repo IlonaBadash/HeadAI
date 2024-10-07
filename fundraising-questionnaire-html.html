@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס גיוס כספים</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>טופס איסוף מידע לגיוס כספים</h1>
+    <form id="fundraisingForm">
+        <label for="storyteller">מי מספר את הסיפור?</label>
+        <input type="text" id="storyteller" name="storyteller" required>
+
+        <label for="targetAudience">עבור מי מגייסים?</label>
+        <input type="text" id="targetAudience" name="targetAudience" required>
+
+        <label for="purpose">מה מטרת הגיוס?</label>
+        <textarea id="purpose" name="purpose" rows="3" required></textarea>
+
+        <label for="amount">כמה צריך לגייס?</label>
+        <input type="text" id="amount" name="amount" required>
+
+        <label for="pastEvents">מה קרה עד עכשיו?</label>
+        <textarea id="pastEvents" name="pastEvents" rows="5" required></textarea>
+
+        <label for="futureEvents">מה צריך לקרות בעתיד?</label>
+        <textarea id="futureEvents" name="futureEvents" rows="5" required></textarea>
+
+        <button type="submit">שלח</button>
+    </form>
+
+    <script>
+        document.getElementById('fundraisingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // כאן יהיה קוד לשליחת הנתונים לשרת
+            console.log('הטופס נשלח!');
+        });
+    </script>
+</body>
+</html>
